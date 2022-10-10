@@ -88,6 +88,7 @@ func POSTHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	fmt.Println("Hello world!")
 	http.HandleFunc("/", GETHandler)
 	http.HandleFunc("/insert", POSTHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
